@@ -222,7 +222,7 @@ describe('App', () => {
       quantity: 50,
     });
 
-    await request(app)
+    const resp = await request(app)
       .post('/orders')
       .send({
         customer_id: customer.body.id,
